@@ -334,32 +334,24 @@ section{padding:65px 0}
 </footer>
 
 <script>
+
+<script>
 const whatsappNumber = "923079654257";
 
-document.getElementById("menuBtn").addEventListener("click", () => {
-const links = document.getElementById("navLinks");
-const open = links.classList.toggle("open");
-document.getElementById("menuBtn").setAttribute("aria-expanded", String(open));
-});
-
-document.querySelectorAll("#navLinks a").forEach(link => link.addEventListener("click", () => {
-document.getElementById("navLinks").classList.remove("open");
-document.getElementById("menuBtn").setAttribute("aria-expanded", "false");
-}));
-
 document.getElementById("orderForm").addEventListener("submit", function(e) {
-e.preventDefault();
+  e.preventDefault();
 
-const customer = document.getElementById("customer").value.trim();
-const phone = document.getElementById("phone").value.trim();
-const product = document.getElementById("product").value;
-const quantity = document.getElementById("quantity").value;
-const city = document.getElementById("city").value;
-const address = document.getElementById("address").value.trim();
-const payment = document.getElementById("payment").value;
-const message = document.getElementById("message").value.trim();
+  const customer = document.getElementById("customer").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const product = document.getElementById("product").value;
+  const quantity = document.getElementById("quantity").value;
+  const city = document.getElementById("city").value;
+  const address = document.getElementById("address").value.trim();
+  const payment = document.getElementById("payment").value;
+  const message = document.getElementById("message").value.trim();
 
-const orderMessage = `🇵🇰 GHAR GIZMO — NEW ORDER REQUEST
+  const orderMessage =
+`🇵🇰 GHAR GIZMO - NEW ORDER REQUEST
 
 Customer: ${customer}
 Phone: ${phone}
@@ -374,10 +366,8 @@ Please confirm product availability, final price and delivery charges.
 
 Thank you!`;
 
-window.open(
-"https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(orderMessage),
-"_blank"
-);
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(orderMessage);
+  window.open(url, "_blank");
 });
 </script>
 </body>
