@@ -1,401 +1,411 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Ghar Gizmo — useful home and kitchen finds across Pakistan.">
-<title>GHAR GIZMO | Smart Finds. Better Living.</title>
+<meta name="description" content="Ghar Gizmo — considered essentials for the modern home.">
+<meta name="theme-color" content="#f5f3ee">
+<title>Ghar Gizmo — Considered Home Essentials</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#f6f3ec;--paper:#fffefa;--ink:#203027;--green:#183f32;--orange:#d9794d;--muted:#737c73;--line:#e6e1d7;--lime:#dce6c7}
+:root{
+ --paper:#f5f3ee;--white:#fffefa;--ink:#202720;--muted:#777d74;
+ --green:#263c32;--green2:#354d40;--clay:#a56e52;--line:#e4e0d7;
+ --soft:#e9e8df;--shadow:0 16px 40px rgba(30,42,34,.07)
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.container{width:min(1160px,calc(100% - 36px));margin:auto}
-.announce{background:var(--green);color:white;text-align:center;padding:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
-header{position:sticky;top:0;z-index:5;background:#f6f3ecef;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.logo{font:800 22px Manrope;color:var(--green);letter-spacing:-1px}
-.logo span{color:var(--orange)}
-.logo small{display:block;font:700 8px "DM Sans";letter-spacing:.2em;color:var(--muted);margin-top:-4px}
-.links{display:flex;gap:25px;font-size:13px;font-weight:700}
-.btn{border:0;border-radius:4px;background:var(--green);color:white;padding:12px 18px;font-size:12px;font-weight:700;cursor:pointer}
-.btn:hover{background:#285643}
-.hero{padding:66px 0}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-.eyebrow,.kicker{color:var(--orange);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
-h1{font:800 clamp(42px,6vw,70px)/1.04 Manrope;letter-spacing:-.06em;margin:16px 0}
-h1 em{font-style:normal;color:var(--orange)}
-.hero p{max-width:480px;color:var(--muted);font-size:15px;line-height:1.9}
-.hero-art{height:350px;border-radius:8px 90px 8px 8px;background:linear-gradient(135deg,#dce5d6,#ead9c8);display:grid;place-items:center;font-size:120px;position:relative}
-.hero-art small{position:absolute;bottom:20px;left:20px;background:white;padding:10px 14px;font-size:10px;font-weight:800;letter-spacing:.1em}
-.trust{background:var(--paper);border-block:1px solid var(--line)}
-.trust-row{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;padding:17px 0;font-size:12px;font-weight:700}
-.trust-row div+div{border-left:1px solid var(--line)}
-section{padding:70px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
-h2{font:800 clamp(28px,4vw,42px)/1.1 Manrope;letter-spacing:-.05em;margin:7px 0}
-.section-head p{max-width:420px;color:var(--muted);font-size:13px;margin:0}
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.product{background:var(--paper);border:1px solid var(--line);border-radius:7px;overflow:hidden;display:flex;flex-direction:column}
-.visual{height:165px;display:grid;place-items:center;background:linear-gradient(135deg,#e7ecdf,#f1e5d9);font-size:65px}
-.info{padding:17px;display:flex;flex-direction:column;flex:1}
-.tag{align-self:flex-start;background:var(--lime);color:var(--green);border-radius:20px;padding:4px 9px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-h3{font:700 16px/1.3 Manrope;margin:11px 0 6px}
-.info p{font-size:12px;color:var(--muted);margin:0 0 13px;min-height:38px}
-.price-line{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
-.price-line strong{font:800 20px Manrope;color:var(--green)}
-.price-line small{font-size:10px;color:var(--muted)}
-.order-btn{margin-top:13px;width:100%}
-.margin-note{font-size:11px;color:var(--muted);margin-top:18px;padding:13px 15px;background:#eeece4;border-left:3px solid var(--orange)}
-.promise{background:var(--green);color:white}
-.promise .kicker{color:var(--lime)}
-.promise p{max-width:700px;color:#d2ddd4;font-size:14px}
-.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}
-.promise-card{border:1px solid #ffffff35;padding:20px;border-radius:5px}
-.promise-card b{display:block;margin:8px 0}
-.promise-card span{font-size:12px;color:#d2ddd4}
-.order{background:#ecefe5}
-.order-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}
-.order-copy p{color:var(--muted);font-size:14px}
-.order-card{background:var(--paper);padding:25px;border-radius:6px}
-.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+.topline{height:34px;background:var(--green);color:#f5f3ee;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:.19em;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:rgba(245,243,238,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{font:800 21px Manrope,sans-serif;letter-spacing:-1.2px;color:var(--green)}
+.brand span{font-weight:500;color:var(--clay)}
+.brand small{display:block;margin-top:-3px;font:600 8px "DM Sans";letter-spacing:.23em;color:var(--muted)}
+.navlinks{display:flex;align-items:center;gap:34px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#4d554e}
+.navlinks a:hover{color:var(--clay)}
+.nav-cta{border:1px solid var(--green);padding:11px 17px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;transition:.2s}
+.nav-cta:hover{background:var(--green);color:white}
+.menu{display:none;border:0;background:none;color:var(--green);font-size:23px}
+.hero{padding:74px 0 66px}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:66px}
+.overline{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--clay);font-weight:700}
+h1{font:500 clamp(46px,6.1vw,78px)/1.04 Manrope,sans-serif;letter-spacing:-.065em;margin:22px 0 20px;max-width:620px}
+h1 em{font-style:normal;color:var(--clay)}
+.hero-copy{max-width:440px;color:var(--muted);font-size:14px;line-height:1.9}
+.hero-actions{display:flex;align-items:center;gap:24px;margin-top:30px}
+.primary{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:white;border:1px solid var(--green);padding:14px 21px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:.2s;cursor:pointer}
+.primary:hover{background:var(--green2)}
+.quiet-link{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;border-bottom:1px solid #a9aaa1;padding-bottom:5px}
+.hero-visual{height:430px;position:relative;background:#dedfd5 url("https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1400&q=85") center/cover}
+.hero-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,243,238,.08),transparent 70%)}
+.hero-visual:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.35)}
+.hero-visual-inner{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:space-between;padding:28px}
+.hero-number{font:500 11px Manrope;letter-spacing:.18em;color:#455147}
+.hero-statement{font:500 clamp(28px,3.5vw,43px)/1.12 Manrope;letter-spacing:-.05em;max-width:300px;color:#28372d;text-shadow:0 1px 10px #fff8}
+.hero-caption{display:flex;justify-content:space-between;align-items:end;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#465348}
+.hero-caption strong{font-size:10px;letter-spacing:.08em}
+.benefits{border-block:1px solid var(--line);background:rgba(255,254,250,.55)}
+.benefit-row{display:grid;grid-template-columns:repeat(3,1fr);padding:18px 0}
+.benefit{font-size:10px;letter-spacing:.1em;text-transform:uppercase;text-align:center;color:#59645b}
+.benefit+.benefit{border-left:1px solid var(--line)}
+.section{padding:78px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:30px}
+.section-kicker{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}
+h2{font:500 clamp(30px,4vw,45px)/1.1 Manrope;letter-spacing:-.055em;margin:10px 0 0}
+.section-intro{max-width:390px;font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.product{background:var(--white);border:1px solid var(--line);min-width:0;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.product:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-art{height:205px;background:var(--tone,#e6e6dc);position:relative;overflow:hidden;display:block}
+.product-art img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s}
+.product:hover .product-art img{transform:scale(1.045)}
+.product-art .art-index{z-index:2;background:rgba(255,254,250,.88);padding:4px 7px;border-radius:20px}
+.art-index{position:absolute;top:16px;left:17px;font-size:9px;letter-spacing:.15em;color:#5c665c}
+.product-info{padding:18px 18px 17px;display:flex;flex-direction:column;flex:1}
+.product-type{font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.product h3{font:600 15px/1.4 Manrope;margin:8px 0 7px;letter-spacing:-.02em}
+.product-desc{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 17px;min-height:38px}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:13px;margin-top:auto}
+.price{font:700 17px Manrope;color:var(--green)}
+.price-note{font-size:8px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.product-button{margin-top:14px;width:100%;padding:11px;border:1px solid var(--green);background:transparent;color:var(--green);font-size:9px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.product-button:hover{background:var(--green);color:white}
+.pricing-note{margin-top:22px;padding:15px 18px;background:#ecebe4;color:#646c63;font-size:10px;line-height:1.7}
+.story{background:var(--green);color:#f5f3ee;padding:72px 0}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story .section-kicker{color:#c9a38c}
+.story h2{font-size:clamp(32px,4vw,48px);max-width:440px}
+.story-copy{font-size:12px;line-height:1.9;color:#d0d8d1;max-width:470px}
+.story-points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.story-point{border-top:1px solid #ffffff38;padding-top:13px}
+.story-point b{display:block;font:600 12px Manrope;margin-bottom:5px}
+.story-point span{font-size:10px;color:#c2cec4;line-height:1.6}
+.order-section{padding:78px 0;background:#eaeae2}
+.order-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}
+.order-copy h2{max-width:390px}
+.order-copy p{font-size:12px;line-height:1.9;color:var(--muted);max-width:350px}
+.order-card{background:var(--white);padding:28px;border:1px solid var(--line)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .field.full{grid-column:1/-1}
-label{display:block;font-size:11px;font-weight:800;color:var(--green);margin-bottom:5px}
-input,select,textarea{width:100%;padding:11px;border:1px solid #dcded4;border-radius:4px;background:white;font:13px "DM Sans"}
-textarea{min-height:70px}
-.note{font-size:10px;color:var(--muted)}
-.submit{width:100%;margin-top:10px}
-.contact{background:var(--orange);color:white;padding:27px 0}
+label{display:block;margin-bottom:6px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#59645b}
+input,select,textarea{width:100%;padding:12px 11px;border:1px solid #dcded5;background:#fffefa;border-radius:0;font:12px "DM Sans";color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--green)}
+textarea{min-height:76px;resize:vertical}
+.form-note{font-size:9px;color:var(--muted);line-height:1.7;margin:14px 0}
+.submit{width:100%}
+.contact{background:#b17c5e;color:white;padding:26px 0}
 .contact-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.contact h2{font-size:24px;margin:0}
-.contact p{font-size:12px;margin:4px 0}
-.contact .btn{background:white;color:var(--green)}
-footer{background:#122d24;color:#d7e0d8;padding:26px 0}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}
-footer p{font-size:11px;color:#afbeb4}
+.contact h2{font-size:22px;margin:0;letter-spacing:-.03em}
+.contact p{font-size:10px;color:#f4e8df;margin:4px 0 0}
+.contact .primary{background:#f5f3ee;color:var(--green);border-color:#f5f3ee}
+footer{background:#1c2d24;color:#e9ece6;padding:30px 0}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}
+footer .brand{color:white}
+footer .brand small{color:#aeb9af}
+footer p{font-size:9px;line-height:1.8;color:#aeb9af;text-align:right}
+
 @media(max-width:800px){
-.hero-grid,.order-grid{grid-template-columns:1fr}
-.products{grid-template-columns:repeat(2,1fr)}
-.section-head{display:block}
-.section-head p{margin-top:10px}
-.promise-grid{grid-template-columns:1fr}
+ .hero-grid,.story-grid,.order-grid{grid-template-columns:1fr;gap:34px}
+ .hero-visual{height:330px}
+ .products{grid-template-columns:repeat(2,1fr)}
+ .section-head{display:block}
+ .section-intro{margin-top:12px}
 }
-@media(max-width:540px){
-.links{gap:12px;font-size:11px}
-.nav{height:64px}
-.hero{padding:42px 0}
-.hero-art{height:245px}
-.products{gap:9px}
-.visual{height:120px;font-size:48px}
-.info{padding:11px}
-h3{font-size:13px}
-.info p{font-size:10px;min-height:50px}
-.price-line strong{font-size:16px}
-.price-line small{font-size:9px}
-.order-btn{font-size:10px;padding:10px 6px}
-.fields{grid-template-columns:1fr}
-.field.full{grid-column:auto}
-.trust-row{grid-template-columns:1fr;gap:9px}
-.trust-row div+div{border:0}
-.contact-row,.foot{align-items:flex-start;flex-direction:column}
+@media(max-width:560px){
+ .wrap{width:calc(100% - 28px)}
+ .nav{height:66px}
+ .menu{display:block}
+ .navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:var(--paper);padding:20px 24px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+ .navlinks.open{display:flex}
+ .nav-cta{display:none}
+ .topline{font-size:8px}
+ .hero{padding:48px 0}
+ .hero-grid{gap:30px}
+ .hero-visual{height:275px}
+ .benefit-row{grid-template-columns:1fr;gap:12px}
+ .benefit+.benefit{border:0}
+ .section{padding:58px 0}
+ .products{gap:9px}
+ .product-art{height:135px}
+ .product-info{padding:12px}
+ .product h3{font-size:12px}
+ .product-desc{font-size:9px;min-height:48px}
+ .price{font-size:14px}
+ .price-note{font-size:7px}
+ .product-button{font-size:8px;padding:10px 4px}
+ .story{padding:56px 0}
+ .story-points{gap:13px}
+ .order-section{padding:58px 0}
+ .order-card{padding:17px}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .contact-row,.footer-row{align-items:flex-start;flex-direction:column}
+ footer p{text-align:left}
 }
 </style>
 </head>
+
 <body>
-<div class="announce">Thoughtful finds for a happier home · Pakistan</div>
+<div class="topline">Considered essentials for everyday living · Pakistan</div>
+
 <header>
-<div class="container nav">
-<a class="logo" href="#">GHAR <span>GIZMO</span><small>SMART FINDS. BETTER LIVING.</small></a>
-<nav class="links">
-<a href="#shop">Shop</a>
-<a href="#why">Our promise</a>
-<a href="#order">Order</a>
-</nav>
-<a class="btn" href="#shop">Explore collection ↗</a>
-</div>
+ <div class="wrap nav">
+  <a class="brand" href="#">GHAR <span>GIZMO</span><small>THE MODERN HOME EDIT</small></a>
+  <nav class="navlinks" id="navLinks">
+   <a href="#shop">Collection</a>
+   <a href="#story">Our approach</a>
+   <a href="#order">Order</a>
+  </nav>
+  <a class="nav-cta" href="#shop">Explore collection&nbsp; ↗</a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+ </div>
 </header>
 
 <main>
 <section class="hero">
-<div class="container hero-grid">
-<div>
-<span class="eyebrow">A little smarter, every day</span>
-<h1>Make room for<br><em>better living.</em></h1>
-<p>Discover clever home and kitchen essentials selected to make everyday moments simpler, smoother and more delightful.</p>
-<a class="btn" href="#shop">Shop the collection →</a>
-</div>
-<div class="hero-art">🏡<small>THE GHAR GIZMO EDIT · HOME MADE EASIER</small></div>
-</div>
+ <div class="wrap hero-grid">
+  <div>
+   <div class="overline">Useful things, thoughtfully selected</div>
+   <h1>A more considered<br>way to <em>live well.</em></h1>
+   <p class="hero-copy">A curated collection of practical home and kitchen essentials. Clean design, clever details and everyday usefulness — without the clutter.</p>
+   <div class="hero-actions">
+    <a class="primary" href="#shop">Discover the collection&nbsp; ↗</a>
+    <a class="quiet-link" href="#story">About Ghar Gizmo</a>
+   </div>
+  </div>
+  <div class="hero-visual">
+   <div class="hero-visual-inner">
+    <span class="hero-number">GG / 001 — HOME EDITION</span>
+    <div class="hero-statement">Everyday objects.<br>Better routines.</div>
+    <div class="hero-caption"><strong>GHAR GIZMO</strong><span>Function meets simplicity</span></div>
+   </div>
+  </div>
+ </div>
 </section>
 
-<div class="trust">
-<div class="container trust-row">
-<div>✦ Useful everyday discoveries</div>
-<div>⌂ Home & kitchen essentials</div>
-<div>♡ WhatsApp order support</div>
-</div>
-</div>
-
-<section id="shop">
-<div class="container">
-<div class="section-head">
-<div><span class="kicker">The practical edit</span><h2>Small upgrades. Everyday ease.</h2></div>
-<p>Shop practical finds for cooking, organizing and cleaning. We confirm stock and delivery before accepting your order.</p>
+<div class="benefits">
+ <div class="wrap benefit-row">
+  <div class="benefit">A considered everyday collection</div>
+  <div class="benefit">Home & kitchen essentials</div>
+  <div class="benefit">Personal WhatsApp assistance</div>
+ </div>
 </div>
 
-<div class="products">
+<section class="section" id="shop">
+ <div class="wrap">
+  <div class="section-head">
+   <div>
+    <div class="section-kicker">The collection / 2026</div>
+    <h2>Useful by design.</h2>
+   </div>
+   <p class="section-intro">Explore practical pieces for the kitchen and home. Product availability, final pricing and delivery charges are confirmed before an order is accepted.</p>
+  </div>
 
-<article class="product">
-<div class="visual">🫗</div><div class="info">
-<span class="tag">Kitchen essential</span>
-<h3>Glass Cooking Oil Sprayer Bottle · 100ml</h3>
-<p>Refillable fine-mist sprayer for oil, BBQ and baking.</p>
-<div class="price-line"><strong>Rs. 499</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Glass Cooking Oil Sprayer Bottle · 100ml">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🥣</div><div class="info">
-<span class="tag">Popular pick</span>
-<h3>Electric Food Chopper</h3>
-<p>USB rechargeable chopper for everyday food preparation.</p>
-<div class="price-line"><strong>Rs. 1,799</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Electric Food Chopper">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🍗</div><div class="info">
-<span class="tag">Kitchen helper</span>
-<h3>Manual Chicken Shredder Tool</h3>
-<p>Twist-handle tool for shredding cooked chicken and meat.</p>
-<div class="price-line"><strong>Rs. 2,199</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Manual Chicken Shredder Tool">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🧻</div><div class="info">
-<span class="tag">Home detail</span>
-<h3>Shell Shape Tissue Box Holder</h3>
-<p>Decorative tissue holder for a neat table or countertop.</p>
-<div class="price-line"><strong>Rs. 899</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Shell Shape Tissue Box Holder">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🥪</div><div class="info">
-<span class="tag">Quick lunch prep</span>
-<h3>2-in-1 Sandwich Cutter & Sealer</h3>
-<p>Cuts and seals sandwiches for lunch boxes and snacks.</p>
-<div class="price-line"><strong>Rs. 699</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="2-in-1 Sandwich Cutter & Sealer">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🥗</div><div class="info">
-<span class="tag">Everyday essential</span>
-<h3>Reusable Elastic Food Covers · 100pcs</h3>
-<p>Stretchable covers for bowls, plates and food storage.</p>
-<div class="price-line"><strong>Rs. 399</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Reusable Elastic Food Covers · 100pcs">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🫙</div><div class="info">
-<span class="tag">Kitchen organization</span>
-<h3>6-Piece Spice Jar Dispenser Set</h3>
-<p>Organize everyday spices with an easy-flow dispenser set.</p>
-<div class="price-line"><strong>Rs. 999</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="6-Piece Spice Jar Dispenser Set">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🌾</div><div class="info">
-<span class="tag">Space saver</span>
-<h3>Wall-Mounted Cereal Dispenser · 1.5L</h3>
-<p>One-touch dry-food dispenser for cereal, rice and grains.</p>
-<div class="price-line"><strong>Rs. 1,399</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Wall-Mounted Cereal Dispenser · 1.5L">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🥕</div><div class="info">
-<span class="tag">Budget favourite</span>
-<h3>Manual Mini Hand-Pull Food Chopper</h3>
-<p>Compact pull-cord chopper for onions, garlic and salad prep.</p>
-<div class="price-line"><strong>Rs. 799</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Manual Mini Hand-Pull Food Chopper">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🍧</div><div class="info">
-<span class="tag">Summer pick</span>
-<h3>Portable Manual Ice Shaver</h3>
-<p>Manual ice shaver for homemade slushies and chilled treats.</p>
-<div class="price-line"><strong>Rs. 1,499</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Portable Manual Ice Shaver">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🥒</div><div class="info">
-<span class="tag">Prep made easier</span>
-<h3>Brava Spring Vegetable Slicer</h3>
-<p>Multi-function manual slicer and grinder for vegetables.</p>
-<div class="price-line"><strong>Rs. 1,799</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Brava Spring Vegetable Slicer">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🧹</div><div class="info">
-<span class="tag">Cleaning pick</span>
-<h3>Sunflower Shape 360° Cleaning Mop</h3>
-<p>Rotating microfiber mop for floors, walls and windows.</p>
-<div class="price-line"><strong>Rs. 999</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Sunflower Shape 360° Cleaning Mop">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🍶</div><div class="info">
-<span class="tag">Kitchen essential</span>
-<h3>2-in-1 Glass Oil Spray & Pour Bottle · 450ml</h3>
-<p>Dual-function glass bottle for spraying or pouring oil.</p>
-<div class="price-line"><strong>Rs. 899</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="2-in-1 Glass Oil Spray & Pour Bottle · 450ml">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🍅</div><div class="info">
-<span class="tag">Serving essential</span>
-<h3>5-Hole Squeeze Sauce Bottle</h3>
-<p>Multi-stream squeeze bottle for sauces and condiments.</p>
-<div class="price-line"><strong>Rs. 699</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="5-Hole Squeeze Sauce Bottle">Order on WhatsApp</button>
-</div></article>
-
-<article class="product">
-<div class="visual">🧽</div><div class="info">
-<span class="tag">Cleaning pick</span>
-<h3>Foldable Mini Sponge Mop</h3>
-<p>Compact self-squeezing mop for kitchen, bathroom and car.</p>
-<div class="price-line"><strong>Rs. 599</strong><small>Suggested price</small></div>
-<button class="btn order-btn" data-product="Foldable Mini Sponge Mop">Order on WhatsApp</button>
-</div></article>
-
-</div>
-
-<div class="margin-note">
-<b>Pricing note:</b> These are suggested customer prices. Gross difference from the displayed supplier price is before delivery, packing, COD, returns, advertising and other costs. Confirm supplier stock and all charges before accepting orders.
-</div>
-</div>
+  <div class="products" id="products"></div>
+  <div class="pricing-note"><strong>Pricing information:</strong> Website prices are suggested retail prices. Any difference from supplier cost is gross margin before delivery, packing, COD, returns, advertising and other operating expenses. Availability and final supplier charges must be reconfirmed before accepting an order.</div>
+ </div>
 </section>
 
-<section class="promise" id="why">
-<div class="container">
-<span class="kicker">The Ghar Gizmo promise</span>
-<h2>Good finds. Less fuss.</h2>
-<p>We focus on useful products that earn their place in your everyday routine. Based in Faisalabad, we aim to serve customers across Pakistan, subject to courier coverage.</p>
-<div class="promise-grid">
-<div class="promise-card">✧<b>Picked for practicality</b><span>Useful home and kitchen finds with everyday purpose.</span></div>
-<div class="promise-card">⌂<b>Simple ordering</b><span>Send your request on WhatsApp and confirm details with us.</span></div>
-<div class="promise-card">☏<b>Real support</b><span>We confirm availability, final price and delivery before accepting an order.</span></div>
-</div>
-</div>
+<section class="story" id="story">
+ <div class="wrap story-grid">
+  <div>
+   <div class="section-kicker">The Ghar Gizmo approach</div>
+   <h2>Less clutter. More considered living.</h2>
+  </div>
+  <div>
+   <p class="story-copy">We believe the best home products are the ones that make daily routines feel easier. Ghar Gizmo brings together useful kitchen, organization and cleaning essentials selected for practical everyday use.</p>
+   <div class="story-points">
+    <div class="story-point"><b>Practical selection</b><span>Useful products chosen for everyday routines.</span></div>
+    <div class="story-point"><b>Clear communication</b><span>We confirm availability and charges before processing.</span></div>
+    <div class="story-point"><b>Simple ordering</b><span>Send an order request directly through WhatsApp.</span></div>
+    <div class="story-point"><b>Based in Faisalabad</b><span>Delivery coverage is confirmed for each order.</span></div>
+   </div>
+  </div>
+ </div>
 </section>
 
-<section class="order" id="order">
-<div class="container order-grid">
-<div class="order-copy">
-<span class="kicker">Let's get you sorted</span>
-<h2>Place an order request.</h2>
-<p>Send your details through WhatsApp. We will confirm availability, final price, COD and delivery charges.</p>
-<p><b>This is an order request, not a confirmed order.</b></p>
-</div>
-<div class="order-card">
-<form id="orderForm">
-<div class="fields">
-<div><label for="customer">Your name *</label><input id="customer" required placeholder="Full name"></div>
-<div><label for="phone">Mobile number *</label><input id="phone" required type="tel" placeholder="+92 3XX XXXXXXX"></div>
-<div class="field full">
-<label for="product">Choose product *</label>
-<select id="product" required>
-<option value="">Select a product</option>
-<option>Glass Cooking Oil Sprayer Bottle · 100ml</option>
-<option>Electric Food Chopper</option>
-<option>Manual Chicken Shredder Tool</option>
-<option>Shell Shape Tissue Box Holder</option>
-<option>2-in-1 Sandwich Cutter & Sealer</option>
-<option>Reusable Elastic Food Covers · 100pcs</option>
-<option>6-Piece Spice Jar Dispenser Set</option>
-<option>Wall-Mounted Cereal Dispenser · 1.5L</option>
-<option>Manual Mini Hand-Pull Food Chopper</option>
-<option>Portable Manual Ice Shaver</option>
-<option>Brava Spring Vegetable Slicer</option>
-<option>Sunflower Shape 360° Cleaning Mop</option>
-<option>2-in-1 Glass Oil Spray & Pour Bottle · 450ml</option>
-<option>5-Hole Squeeze Sauce Bottle</option>
-<option>Foldable Mini Sponge Mop</option>
-</select>
-</div>
-<div><label for="quantity">Quantity *</label><input id="quantity" type="number" min="1" max="20" value="1" required></div>
-<div><label for="city">City *</label><input id="city" required placeholder="e.g. Faisalabad"></div>
-<div class="field full"><label for="address">Complete delivery address *</label><textarea id="address" required placeholder="House, street, area and city"></textarea></div>
-</div>
-<p class="note">Your information will be sent to Ghar Gizmo on WhatsApp. We will confirm the total before processing.</p>
-<button class="btn submit" type="submit">Send order request on WhatsApp ↗</button>
-</form>
-</div>
-</div>
+<section class="order-section" id="order">
+ <div class="wrap order-grid">
+  <div class="order-copy">
+   <div class="section-kicker">Start with a message</div>
+   <h2>Make it yours.</h2>
+   <p>Tell us what you would like to order. Your request opens in WhatsApp, where we can confirm current stock, total price and delivery details.</p>
+   <p><strong>Submitting the form is a request only — your order is confirmed after we reply.</strong></p>
+  </div>
+
+  <div class="order-card">
+   <form id="orderForm">
+    <div class="form-grid">
+     <div>
+      <label for="customer">Full name *</label>
+      <input id="customer" required placeholder="Your name">
+     </div>
+     <div>
+      <label for="phone">Mobile number *</label>
+      <input id="phone" type="tel" required placeholder="+92 3XX XXXXXXX">
+     </div>
+     <div class="field full">
+      <label for="product">Select a product *</label>
+      <select id="product" required>
+       <option value="">Choose from collection</option>
+      </select>
+     </div>
+     <div>
+      <label for="quantity">Quantity *</label>
+      <input id="quantity" type="number" min="1" max="20" value="1" required>
+     </div>
+     <div>
+      <label for="city">City *</label>
+      <input id="city" required placeholder="Your city">
+     </div>
+     <div class="field full">
+      <label for="address">Delivery address *</label>
+      <textarea id="address" required placeholder="House, street, area and city"></textarea>
+     </div>
+    </div>
+    <p class="form-note">Your details will be included in a WhatsApp message to Ghar Gizmo. We will confirm availability, delivery and final total before processing.</p>
+    <button class="primary submit" type="submit">Send order request&nbsp; ↗</button>
+   </form>
+  </div>
+ </div>
 </section>
 
 <div class="contact">
-<div class="container contact-row">
-<div><h2>Questions? We're one message away.</h2><p>Talk to GHAR GIZMO directly on WhatsApp.</p></div>
-<a class="btn" href="https://wa.me/923079654257" target="_blank" rel="noopener">Chat with us ↗</a>
-</div>
+ <div class="wrap contact-row">
+  <div>
+   <h2>A question before you order?</h2>
+   <p>Speak with Ghar Gizmo directly on WhatsApp.</p>
+  </div>
+  <a class="primary" href="https://wa.me/923162554021" target="_blank" rel="noopener">Start a conversation&nbsp; ↗</a>
+ </div>
 </div>
 </main>
 
 <footer>
-<div class="container foot">
-<a class="logo" href="#" style="color:white">GHAR <span>GIZMO</span><small style="color:#afbeb4">SMART FINDS. BETTER LIVING.</small></a>
-<p>Home & kitchen finds · Faisalabad, Pakistan<br>© 2026 GHAR GIZMO</p>
-</div>
+ <div class="wrap footer-row">
+  <a class="brand" href="#">GHAR <span>GIZMO</span><small>THE MODERN HOME EDIT</small></a>
+  <p>Home & kitchen essentials · Faisalabad, Pakistan<br>© 2026 Ghar Gizmo. All rights reserved.</p>
+ </div>
 </footer>
 
 <script>
-const whatsappNumber="923079654257";
+const whatsappNumber = "923162554021";
 
-document.querySelectorAll(".order-btn").forEach(button=>{
-button.addEventListener("click",()=>{
-document.getElementById("product").value=button.dataset.product;
-document.getElementById("order").scrollIntoView({behavior:"smooth"});
+const productPhotos = [
+ 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1584990347449-a8e6f4a2b7a4?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80',
+ 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80'
+];
+
+const products = [
+ {name:"Glass Cooking Oil Sprayer Bottle · 100ml",price:499,category:"Kitchen essentials",desc:"A refillable fine-mist sprayer for everyday cooking.",mark:"01",tone:"#e7e4d9"},
+ {name:"Electric Food Chopper",price:1799,category:"Food preparation",desc:"A compact rechargeable helper for everyday prep.",mark:"02",tone:"#e0e5dc"},
+ {name:"Manual Chicken Shredder Tool",price:2199,category:"Food preparation",desc:"A simple twist-action tool for shredding cooked chicken.",mark:"03",tone:"#e8dfd7"},
+ {name:"Shell Shape Tissue Box Holder",price:899,category:"Home details",desc:"A decorative holder for a considered tabletop.",mark:"04",tone:"#e4e1d8"},
+ {name:"2-in-1 Sandwich Cutter & Sealer",price:699,category:"Kitchen essentials",desc:"A practical cutter and sealer for sandwiches and snacks.",mark:"05",tone:"#e5e8df"},
+ {name:"Reusable Elastic Food Covers · 100pcs",price:399,category:"Food storage",desc:"Stretch covers for bowls, plates and food storage.",mark:"06",tone:"#e8e2d9"},
+ {name:"6-Piece Spice Jar Dispenser Set",price:999,category:"Kitchen organization",desc:"Keep frequently used spices neat and close at hand.",mark:"07",tone:"#e1e5dc"},
+ {name:"Wall-Mounted Cereal Dispenser · 1.5L",price:1399,category:"Kitchen organization",desc:"A space-conscious dispenser for dry kitchen staples.",mark:"08",tone:"#e8e2d8"},
+ {name:"Manual Mini Hand-Pull Food Chopper",price:799,category:"Food preparation",desc:"A compact pull-cord chopper for quick everyday prep.",mark:"09",tone:"#e1e6df"},
+ {name:"Portable Manual Ice Shaver",price:1499,category:"Kitchen essentials",desc:"A manual ice shaver for chilled drinks and treats.",mark:"10",tone:"#dfe7e8"},
+ {name:"Brava Spring Vegetable Slicer",price:1799,category:"Food preparation",desc:"A multi-function manual slicer for vegetable prep.",mark:"11",tone:"#e8e4d9"},
+ {name:"Sunflower Shape 360° Cleaning Mop",price:999,category:"Home care",desc:"A rotating mop for everyday household cleaning.",mark:"12",tone:"#e0e5dc"},
+ {name:"2-in-1 Glass Oil Spray & Pour Bottle · 450ml",price:899,category:"Kitchen essentials",desc:"A dual-function bottle for spraying or pouring oil.",mark:"13",tone:"#e8e1d7"},
+ {name:"5-Hole Squeeze Sauce Bottle",price:699,category:"Kitchen essentials",desc:"A multi-stream squeeze bottle for sauces and condiments.",mark:"14",tone:"#e4e7de"},
+ {name:"Foldable Mini Sponge Mop",price:599,category:"Home care",desc:"A compact squeeze mop for kitchen and bathroom tasks.",mark:"15",tone:"#e2e5dc"}
+];
+
+const money = value => "Rs. " + value.toLocaleString("en-PK");
+const grid = document.getElementById("products");
+const select = document.getElementById("product");
+
+products.forEach((item,index) => {
+ const card = document.createElement("article");
+ card.className = "product";
+
+ card.innerHTML = `
+  <div class="product-art" style="--tone:${item.tone}">
+   <img src="${productPhotos[index]}" alt="${item.name}" loading="lazy">
+   <span class="art-index">GHAR GIZMO / ${item.mark}</span>
+  </div>
+  <div class="product-info">
+   <span class="product-type">${item.category}</span>
+   <h3>${item.name}</h3>
+   <p class="product-desc">${item.desc}</p>
+   <div class="product-bottom">
+    <span class="price">${money(item.price)}</span>
+    <span class="price-note">Suggested price</span>
+   </div>
+   <button class="product-button" type="button" data-index="${index}">Enquire / order ↗</button>
+  </div>`;
+
+ grid.appendChild(card);
+
+ const option = document.createElement("option");
+ option.value = item.name;
+ option.textContent = item.name;
+ select.appendChild(option);
 });
+
+grid.addEventListener("click",event => {
+ const button = event.target.closest(".product-button");
+ if (!button) return;
+
+ select.value = products[Number(button.dataset.index)].name;
+ document.getElementById("order").scrollIntoView({behavior:"smooth"});
 });
 
-document.getElementById("orderForm").addEventListener("submit",event=>{
-event.preventDefault();
+document.getElementById("menuBtn").addEventListener("click",() => {
+ document.getElementById("navLinks").classList.toggle("open");
+});
 
-const v=id=>document.getElementById(id).value.trim();
+document.querySelectorAll(".navlinks a").forEach(link => {
+ link.addEventListener("click",() => {
+  document.getElementById("navLinks").classList.remove("open");
+ });
+});
 
-const msg=`GHAR GIZMO ORDER REQUEST
+document.getElementById("orderForm").addEventListener("submit",event => {
+ event.preventDefault();
 
-Name: ${v("customer")}
-Phone: ${v("phone")}
-Product: ${v("product")}
-Quantity: ${v("quantity")}
-City: ${v("city")}
-Address: ${v("address")}
+ const value = id => document.getElementById(id).value.trim();
 
-Please confirm stock, final price, COD and delivery charges. Thank you!`;
+ const message = `GHAR GIZMO — ORDER REQUEST
 
-window.open(
-"https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(msg),
-"_blank"
-);
+Name: ${value("customer")}
+Phone: ${value("phone")}
+Product: ${value("product")}
+Quantity: ${value("quantity")}
+City: ${value("city")}
+Address: ${value("address")}
+
+Please confirm current availability, final price, COD and delivery charges. Thank you.`;
+
+ window.open(
+  "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message),
+  "_blank"
+ );
 });
 </script>
 </body>
